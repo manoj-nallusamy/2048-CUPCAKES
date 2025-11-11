@@ -146,6 +146,7 @@ GameManager.prototype.fillLegend = function () {
     cell.classList.add('legend-cell');
     cell.classList.add('cell-' + exp);
     img.src = "style/img/" + exp + ".jpg";
+    img.alt = Localize(exp) + " cupcake in 2048";
     cell.appendChild(img);
     grid.appendChild(cell);
     row.appendChild(grid);

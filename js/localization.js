@@ -1,13 +1,13 @@
 String.toLocaleString({
 
 	"it": {
-    "%game-intro"           : "Join the <strong>Cupcakes!</strong>",
-    "%restart-button"       : "Play Again",
+    "%game-intro"           : "<small>Join identical cupcakes to bake the ultimate</small> <strong>cupcake</strong>!",
+    "%restart-button"       : "New Game",
     "%keep-playing-button"  : "Keep going",
     "%retry-button"         : "Retry",
     "%game-won"             : "You win!",
     "%game-over"            : "Game over!",
-    "%game-explanation"     : "<strong class=\"important\">How to play:</strong> Use your <strong>arrow keys</strong> to move the tiles. When two tiles with the same symbol touch, they <strong>get promoted!</strong>",
+    "%game-explanation"     : "<strong class=\"important\">How to play:</strong> Use your <strong>arrow keys</strong> or swipe to move the tiles. When two tiles with the same cupcake collide, they <strong>combine</strong> into a richer cupcake!",
     "%disclaimer"           : "<strong class=\"important\">Note:</strong> This site <a href=\"http://git.io/cupcakes\">git.io/cupcakes</a> is a spin-off of the official version of <a href=\"http://git.io/2048\">2048</a> created by <a href=\"http://gabrielecirulli.com\" target=\"_blank\">Gabriele Cirulli</a>.",
     "%credits"              : "Cupcakes images by <a href=\"http://www.georgetowncupcake.com/\" title=\"Georgetown Cupcake | DC Cupcakes | About\">Georgetown Cupcake</a>.",
     "%tweet1"               : "I scored \"",
@@ -43,13 +43,13 @@ String.toLocaleString({
 	},
 
   "en": {
-    "%game-intro"           : "Join the <strong>Cupcakes!</strong>",
-    "%restart-button"       : "Play Again",
+    "%game-intro"           : "Join Identical <strong>Cupcakes</strong>!",
+    "%restart-button"       : "New Game",
     "%keep-playing-button"  : "Keep going",
     "%retry-button"         : "Retry",
     "%game-won"             : "You win!",
     "%game-over"            : "Game over!",
-    "%game-explanation"     : "<strong class=\"important\">How to play:</strong> Use your <strong>arrow keys</strong> to move the tiles. When two tiles with the same symbol touch, they <strong>get promoted!</strong>",
+    "%game-explanation"     : "<strong class=\"important\">How to play:</strong> Use your <strong>arrow keys</strong> or swipe to move the tiles. When two tiles with the same cupcake collide, they <strong>combine</strong> into a richer cupcake!",
     "%disclaimer"           : "<strong class=\"important\">Note:</strong> This site <a href=\"http://git.io/cupcakes\">git.io/cupcakes</a> is a spin-off of the official version of <a href=\"http://git.io/2048\">2048</a> created by <a href=\"http://gabrielecirulli.com\" target=\"_blank\">Gabriele Cirulli</a>.",
     "%credits"              : "Cupcakes images by <a href=\"http://www.georgetowncupcake.com/\" title=\"Georgetown Cupcake | DC Cupcakes | About\">Georgetown Cupcake</a>.",
     "%tweet1"               : "I scored \"",

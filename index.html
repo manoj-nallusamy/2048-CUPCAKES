@@ -1,8 +1,14 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>2048 CUPCAKES</title>
+  <title>Play 2048 Cupcakes — Merge Cupcake Tiles | Free Online Game</title>
+  <meta name="description" content="Play 2048 Cupcakes online. Merge delicious cupcake tiles to reach 2048 and beyond. Smooth gameplay, keyboard and swipe controls, strategy tips, and no sign-up.">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#f67070">
+  
+  <link rel="manifest" href="/manifest.json">
 
   <link href="style/main.css" rel="stylesheet" type="text/css">
   <link rel="shortcut icon" href="favicon.ico">
@@ -12,8 +18,34 @@
 
   <meta name="HandheldFriendly" content="True">
   <meta name="MobileOptimized" content="320">
-  <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0, maximum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <meta name="format-detection" content="telephone=no" />
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Play 2048 Cupcakes — Merge Cupcake Tiles | Free Online Game">
+  <meta property="og:description" content="Merge cupcake tiles to reach 2048. Fast, responsive, and fun puzzle you can play in your browser.">
+  <meta property="og:image" content="style/img/1024.jpg">
+  <meta property="og:image:alt" content="2048 Cupcakes gameplay board">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Play 2048 Cupcakes — Free Online Puzzle">
+  <meta name="twitter:description" content="Swipe or use arrow keys to combine cupcakes and score big.">
+  <meta name="twitter:image" content="style/img/1024.jpg">
+
+  <link rel="preload" href="style/fonts/ClearSans-Regular-webfont.woff" as="font" type="font/woff" crossorigin>
+  <link rel="preload" href="style/fonts/ClearSans-Bold-webfont.woff" as="font" type="font/woff" crossorigin>
+
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXX', {
+      send_page_view: true,
+      anonymize_ip: true
+    });
+  </script>
 </head>
 <body>
   <div class="container">
@@ -32,7 +64,7 @@
     </div>
 
     <div class="above-game">
-      <p class="game-intro">Join tiles and destroy <strong>EMPIRE!</strong></p>
+      <p class="game-intro"><small>Join identical cupcakes to bake the ultimate</small> <strong>cupcake</strong>!</p>
       <a class="restart-button">New Game</a>
     </div>
 
@@ -77,35 +109,77 @@
 
       </div>
     </div>
-
-    <p class="game-explanation">
-      <strong class="important">How to play:</strong> Use your <strong>arrow keys</strong> to move the tiles. When two tiles with the same symbol touch, they <strong>get promoted!</strong>
-    </p>
+    
+    <!-- Offline message overlay -->
+    <div id="offline-message" class="offline-overlay" style="display: none;">
+      <div class="offline-content">
+        <h2>No Internet Connection</h2>
+        <p>Please connect to the internet to play 2048 Cupcakes.</p>
+        <p class="offline-subtitle">The game requires an active internet connection to function.</p>
+      </div>
+    </div>
+    <section aria-labelledby="how-to-play">
+      <h2 id="how-to-play">How to Play 2048 Cupcakes</h2>
+      <p>Slide the board using your arrow keys (or swipe on mobile). When two identical cupcakes collide, they combine into a richer cupcake and your score increases. Plan ahead, create open spaces, and chain merges to reach Rainbow Cupcake and beyond.</p>
+      <ul>
+        <li><strong>Keyboard:</strong> Use ↑ ↓ ← → to move.</li>
+        <li><strong>Mobile:</strong> Swipe in any direction.</li>
+        <li><strong>Goal:</strong> Merge cupcakes to reach the 2048 tile, then push your high score higher.</li>
+      </ul>
+    </section>
     <hr>
     <p class="tile-legend"><strong class="important">Tile Legend:</strong></p>
     <hr>
-    <p class="disclaimer">
-    <strong class="important">Note:</strong> This site <a href="http://git.io/cupcakes">git.io/cupcakes</a> is a spin-off of the official version of <a href="http://git.io/2048">2048</a> created by <a href="http://gabrielecirulli.com" target="_blank">Gabriele Cirulli.</a>
-    </p>
+    <section aria-labelledby="strategy-tips">
+      <h2 id="strategy-tips">Strategy Tips</h2>
+      <ul>
+        <li>Pick a corner and keep your highest-value cupcake anchored there.</li>
+        <li>Avoid moves that break your stack; prefer two-direction play (e.g., only left and down).</li>
+        <li>Look for safe merges that don’t trap low-value tiles.</li>
+        <li>Think one move ahead to prevent filling the board.</li>
+      </ul>
+    </section>
+    <section aria-labelledby="faq">
+      <h2 id="faq">FAQ</h2>
+      <p><strong>Is 2048 Cupcakes free?</strong> Yes—play instantly in your browser with no sign-up.</p>
+      <p><strong>Does it work on phones?</strong> Absolutely. The game supports responsive layouts and touch controls.</p>
+      <p><strong>How do I save my best score?</strong> Your best score is stored locally in your browser.</p>
+      <p><strong>Can I install this game as an app?</strong> Yes! 2048 Cupcakes is a Progressive Web App (PWA). You can install it on your phone or computer for quick access. On mobile, look for the "Add to Home Screen" prompt, or use your browser's menu. On desktop, click the install icon in your browser's address bar.</p>
+      <p><strong>Does it work offline?</strong> No, the game requires an active internet connection to play. If you lose connection, you'll see a message asking you to reconnect to the internet.</p>
+      <p><strong>How do I add it to my home screen?</strong> On Android: Tap the menu (three dots) → "Add to Home screen" or "Install app". On iOS: Tap the Share button → "Add to Home Screen". On desktop browsers: Click the install icon in the address bar when available.</p>
+    </section>
     <hr>
     <p class="credits">
       Cupcakes images by <a href="http://www.georgetowncupcake.com/" title="Georgetown Cupcake | DC Cupcakes | About">Georgetown Cupcake</a>.
     </p>
-    <p class="repo-link"><small>hosted on <a href="https://github.com/0x0800/">GitHub</a></small></p>
+    <footer class="site-footer"><small>Inspired by <a href="https://github.com/0x0800/2048-CUPCAKES" rel="noopener">2048 CUPCAKES</a>. Original 2048 by <a href="http://gabrielecirulli.com" target="_blank" rel="noopener">Gabriele Cirulli</a>.</small></footer>
   </div>
 
-  <script src="js/bind_polyfill.js"></script>
-  <script src="js/classlist_polyfill.js"></script>
-  <script src="js/animframe_polyfill.js"></script>
-  <script src="js/l10n.js"></script>
-  <script src="js/localization.js"></script>
-  <script src="js/keyboard_input_manager.js"></script>
-  <script src="js/html_actuator.js"></script>
-  <script src="js/grid.js"></script>
-  <script src="js/tile.js"></script>
-  <script src="js/local_storage_manager.js"></script>
-  <script src="js/game_manager.js"></script>
-  <script src="js/application.js"></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Game",
+    "name": "2048 Cupcakes",
+    "description": "Merge cupcake tiles to reach 2048 in this free, browser-based puzzle game with keyboard and touch controls.",
+    "genre": "Puzzle",
+    "applicationCategory": "Game",
+    "operatingSystem": "Browser",
+    "image": "style/img/1024.jpg"
+  }
+  </script>
+
+  <script src="js/bind_polyfill.js" defer></script>
+  <script src="js/classlist_polyfill.js" defer></script>
+  <script src="js/animframe_polyfill.js" defer></script>
+  <script src="js/l10n.js" defer></script>
+  <script src="js/localization.js" defer></script>
+  <script src="js/keyboard_input_manager.js" defer></script>
+  <script src="js/html_actuator.js" defer></script>
+  <script src="js/grid.js" defer></script>
+  <script src="js/tile.js" defer></script>
+  <script src="js/local_storage_manager.js" defer></script>
+  <script src="js/game_manager.js" defer></script>
+  <script src="js/application.js" defer></script>
   <script>
     window.twttr = (function (d,s,id) {
       var t, js, fjs = d.getElementsByTagName(s)[0];
@@ -114,18 +188,70 @@
       return window.twttr || (t = { _e: [], ready: function(f){ t._e.push(f) } });
     }(document, "script", "twitter-wjs"));
   </script>
-  <script type="text/javascript">
-
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-49474780-3']);
-    _gaq.push(['_trackPageview']);
-
-    (function() {
-      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-      ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
-      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
-
+  
+  <!-- Service Worker Registration for PWA -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register('/sw.js')
+          .then(function(registration) {
+            console.log('ServiceWorker registration successful with scope: ', registration.scope);
+          })
+          .catch(function(error) {
+            console.log('ServiceWorker registration failed: ', error);
+          });
+      });
+    }
   </script>
+  
+  <!-- Offline Detection -->
+  <script>
+    (function() {
+      var offlineMessage = document.getElementById('offline-message');
+      var gameContainer = document.querySelector('.game-container');
+      
+      function updateOfflineStatus() {
+        if (!navigator.onLine) {
+          offlineMessage.style.display = 'flex';
+          if (gameContainer) {
+            gameContainer.style.pointerEvents = 'none';
+            gameContainer.style.opacity = '0.5';
+          }
+        } else {
+          offlineMessage.style.display = 'none';
+          if (gameContainer) {
+            gameContainer.style.pointerEvents = 'auto';
+            gameContainer.style.opacity = '1';
+          }
+        }
+      }
+      
+      // Check on load
+      updateOfflineStatus();
+      
+      // Listen for online/offline events
+      window.addEventListener('online', updateOfflineStatus);
+      window.addEventListener('offline', updateOfflineStatus);
+      
+      // Also check periodically in case events don't fire
+      setInterval(function() {
+        fetch('/manifest.json', { method: 'HEAD', cache: 'no-cache' })
+          .then(function() {
+            if (!navigator.onLine) {
+              // Force update if we detect connection
+              updateOfflineStatus();
+            }
+          })
+          .catch(function() {
+            // Network error - we're offline
+            if (navigator.onLine) {
+              updateOfflineStatus();
+            }
+          });
+      }, 5000);
+    })();
+  </script>
+  
+  <!-- Analytics/ads can be added here by the site owner -->
 </body>
 </html>

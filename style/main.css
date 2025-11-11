@@ -10,7 +10,8 @@ html, body {
 
 body {
   padding: 80px 0;
-  background-image: url(img/bg.jpg);
+  background-image: url(img/image-blr.jpg);
+  max-width: 100%;
   background-position: top center;
   background-repeat: no-repeat; }
 
@@ -65,7 +66,7 @@ h1.title {
   overflow: hidden;
   position: relative;
   display: inline-block;
-  background: #f67098;
+  background: #f67070;
   padding: 15px 0px;
   font-size: 19px;
   text-transform: capitalize;
@@ -178,7 +179,7 @@ hr {
   -ms-user-select: none;
   -ms-touch-action: none;
   touch-action: none;
-  background: #f67098;
+  background: #f67070;
   border-radius: 6px;
   width: 500px;
   height: 500px;
@@ -212,7 +213,7 @@ hr {
       margin-top: 59px; }
     .game-container .game-message a {
       display: inline-block;
-      background: #f888a9;
+      background: #f67070;
       border-radius: 3px;
       padding: 0 20px;
       text-decoration: none;
@@ -530,7 +531,7 @@ hr {
 
 .restart-button {
   display: inline-block;
-  background: #f888a9;
+  background: #f67070;
   border-radius: 3px;
   padding: 0 20px;
   text-decoration: none;
@@ -544,9 +545,67 @@ hr {
 .game-explanation {
   margin-top: 50px; }
 
+/* Offline message overlay */
+.offline-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.85);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(5px);
+}
+
+.offline-content {
+  background: #faf8ef;
+  border-radius: 6px;
+  padding: 40px;
+  max-width: 400px;
+  text-align: center;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.offline-content h2 {
+  color: #776e65;
+  font-size: 28px;
+  margin: 0 0 20px 0;
+  font-weight: bold;
+}
+
+.offline-content p {
+  color: #776e65;
+  font-size: 18px;
+  line-height: 1.6;
+  margin: 10px 0;
+}
+
+.offline-subtitle {
+  font-size: 14px;
+  color: #8f7a66;
+  margin-top: 15px;
+}
+
 @media screen and (max-width: 520px) {
   html, body {
     font-size: 15px; }
+  
+  .offline-content {
+    padding: 30px 20px;
+    margin: 20px;
+    max-width: calc(100% - 40px);
+  }
+  
+  .offline-content h2 {
+    font-size: 22px;
+  }
+  
+  .offline-content p {
+    font-size: 16px;
+  }
 
   body {
     margin: 20px 0;
@@ -577,7 +636,7 @@ hr {
     box-sizing: border-box;
     line-height: 1.65;
     font-size: 16px;
-    margin-top: 10px; }
+    margin-top: 0px; }
 
   .restart-button, .retry-button {
     width: 42%;
@@ -598,7 +657,7 @@ hr {
     -ms-user-select: none;
     -ms-touch-action: none;
     touch-action: none;
-    background: #f67098;
+    background: #f67070;
     border-radius: 6px;
     width: 280px;
     height: 280px;
@@ -632,7 +691,7 @@ hr {
         margin-top: 59px; }
       .game-container .game-message a {
         display: inline-block;
-        background: #f888a9;
+        background: #f67070;
         border-radius: 3px;
         padding: 0 20px;
         text-decoration: none;
@@ -784,7 +843,7 @@ hr {
   -ms-user-select: none;
   -ms-touch-action: none;
   touch-action: none;
-  background: #f67098;
+  background: #f67070;
   border-radius: 4px;
   width: 73px;
   height: 73px;

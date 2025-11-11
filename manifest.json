@@ -1,0 +1,47 @@
+{
+  "name": "2048 Cupcakes - Merge Puzzle Game",
+  "short_name": "2048 Cupcakes",
+  "description": "Play 2048 Cupcakes online. Merge delicious cupcake tiles to reach 2048 and beyond. Smooth gameplay, keyboard and swipe controls.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#faf8ef",
+  "theme_color": "#f67070",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "48x48",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "meta/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "style/img/1024.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg",
+      "purpose": "any"
+    }
+  ],
+  "categories": ["games", "entertainment", "puzzle"],
+  "screenshots": [],
+  "shortcuts": [
+    {
+      "name": "New Game",
+      "short_name": "New Game",
+      "description": "Start a new game",
+      "url": "/?action=new",
+      "icons": [
+        {
+          "src": "meta/apple-touch-icon.png",
+          "sizes": "180x180"
+        }
+      ]
+    }
+  ]
+}
+
