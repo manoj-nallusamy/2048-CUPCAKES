@@ -13,7 +13,7 @@
   <link href="style/main.css" rel="stylesheet" type="text/css">
   <link rel="shortcut icon" href="favicon.ico">
   <link rel="apple-touch-icon" href="meta/apple-touch-icon.png">
-  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
   <meta name="HandheldFriendly" content="True">
@@ -36,14 +36,16 @@
   <link rel="preload" href="style/fonts/ClearSans-Bold-webfont.woff" as="font" type="font/woff" crossorigin>
 
   <!-- Google Analytics 4 -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
+  <!-- Replace G-XXXXXXXXXX with your actual Google Analytics Measurement ID -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-XXXXXXX', {
+    gtag('config', 'G-XXXXXXXXXX', {
       send_page_view: true,
-      anonymize_ip: true
+      anonymize_ip: true,
+      cookie_flags: 'SameSite=None;Secure'
     });
   </script>
 </head>

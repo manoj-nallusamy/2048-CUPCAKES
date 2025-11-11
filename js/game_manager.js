@@ -39,6 +39,14 @@ GameManager.prototype.restart = function () {
   this.storageManager.clearGameState();
   this.actuator.continueGame(); // Clear the game won/lost message
   this.setup();
+  
+  // Track new game event
+  if (typeof gtag !== 'undefined') {
+    gtag('event', 'game_start', {
+      'event_category': 'Game',
+      'event_label': 'New Game'
+    });
+  }
 };
 
 // Crowd board
@@ -273,7 +281,34 @@ GameManager.prototype.move = function (direction) {
           if (merged.value > self.score) self.score = merged.value;
 
           // The mighty 2048 tile
-          if (merged.value === 2048 || merged.value === 2048) self.won = true;
+          if (merged.value === 2048 || merged.value === 2048) {
+            self.won = true;
+            
+            // Track game won event
+            if (typeof gtag !== 'undefined') {
+              gtag('event', 'game_won', {
+                'event_category': 'Game',
+                'event_label': 'Reached 2048',
+                'value': self.score,
+                'score': self.score,
+                'points': self.points
+              });
+            }
+          }
+          
+          // Track score milestones
+          if (typeof gtag !== 'undefined') {
+            var milestones = [512, 1024, 2048, 4096, 8192];
+            if (milestones.indexOf(merged.value) !== -1) {
+              gtag('event', 'milestone_reached', {
+                'event_category': 'Game',
+                'event_label': 'Tile ' + merged.value,
+                'value': merged.value,
+                'score': self.score,
+                'points': self.points
+              });
+            }
+          }
         } else {
           self.moveTile(tile, positions.farthest);
         }
@@ -290,6 +325,17 @@ GameManager.prototype.move = function (direction) {
 
     if (!this.movesAvailable()) {
       this.over = true; // Game over!
+      
+      // Track game over event
+      if (typeof gtag !== 'undefined') {
+        gtag('event', 'game_over', {
+          'event_category': 'Game',
+          'event_label': 'Game Over',
+          'value': this.score,
+          'score': this.score,
+          'points': this.points
+        });
+      }
     }
 
     this.actuate();
