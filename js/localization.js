@@ -1,7 +1,7 @@
 String.toLocaleString({
 
 	"it": {
-    "%game-intro"           : "<small>Join identical cupcakes to bake the ultimate</small> <strong>cupcake</strong>!",
+    "%game-intro"           : "Join Identical <strong>Cupcakes</strong>!",
     "%restart-button"       : "New Game",
     "%keep-playing-button"  : "Keep going",
     "%retry-button"         : "Retry",
