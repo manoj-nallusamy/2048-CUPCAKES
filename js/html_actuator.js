@@ -9,6 +9,16 @@ function HTMLActuator() {
 
   this.score = 0;
   this.points = 0;
+
+  // Add grid size class to tile container based on GameConfig
+  if (window.GameConfig) {
+    var gridSize = window.GameConfig.getGridSize();
+    if (gridSize === 3) {
+      this.tileContainer.classList.add("grid-3x3");
+    } else if (gridSize === 5) {
+      this.tileContainer.classList.add("grid-5x5");
+    }
+  }
 }
 
 HTMLActuator.prototype.actuate = function (grid, metadata) {

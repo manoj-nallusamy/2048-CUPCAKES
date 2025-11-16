@@ -2,12 +2,13 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Play 2048 Cupcakes — Merge Cupcake Tiles | Free Online Game</title>
-  <meta name="description" content="Play 2048 Cupcakes online. Merge delicious cupcake tiles to reach 2048 and beyond. Smooth gameplay, keyboard and swipe controls, strategy tips, and no sign-up.">
+  <title>Play 2048 Cupcakes 5x5 Mode — Easier Puzzle Game</title>
+  <meta name="description" content="Play 2048 Cupcakes in 5x5 mode. An easier version with more space. Merge delicious cupcake tiles to reach 2048 and beyond.">
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#f67070">
 
+  <link rel="canonical" content="/2048-cupcakes/5x5/">
   <link rel="manifest" href="/manifest.json">
 
   <link href="/style/main.css" rel="stylesheet" type="text/css">
@@ -29,15 +30,15 @@
   <meta name="format-detection" content="telephone=no" />
 
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Play 2048 Cupcakes — Merge Cupcake Tiles | Free Online Game">
-  <meta property="og:description" content="Merge cupcake tiles to reach 2048. Fast, responsive, and fun puzzle you can play in your browser.">
+  <meta property="og:title" content="Play 2048 Cupcakes 5x5 Mode — Easier Puzzle Game">
+  <meta property="og:description" content="Play 2048 Cupcakes in relaxing 5x5 mode. More space, easier gameplay!">
   <meta property="og:image" content="/style/img/1024.jpg">
-  <meta property="og:image:alt" content="2048 Cupcakes gameplay board">
-  <meta property="og:url" content="/2048-cupcakes/">
+  <meta property="og:image:alt" content="2048 Cupcakes 5x5 gameplay board">
+  <meta property="og:url" content="/2048-cupcakes/5x5/">
 
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Play 2048 Cupcakes — Free Online Puzzle">
-  <meta name="twitter:description" content="Swipe or use arrow keys to combine cupcakes and score big.">
+  <meta name="twitter:title" content="Play 2048 Cupcakes 5x5 — Easier Mode">
+  <meta name="twitter:description" content="Enjoy the 5x5 mode with more space and easier gameplay!">
   <meta name="twitter:image" content="/style/img/1024.jpg">
 
   <link rel="preload" href="/style/fonts/ClearSans-Regular-webfont.woff" as="font" type="font/woff" crossorigin>
@@ -80,13 +81,13 @@
       <span class="mode-selector-label">Game Mode:</span>
       <div class="mode-buttons">
         <a href="/2048-cupcakes/3x3/" class="mode-button">3×3</a>
-        <a href="/2048-cupcakes/" class="mode-button active">4×4</a>
-        <a href="/2048-cupcakes/5x5/" class="mode-button">5×5</a>
+        <a href="/2048-cupcakes/" class="mode-button">4×4</a>
+        <a href="/2048-cupcakes/5x5/" class="mode-button active">5×5</a>
       </div>
     </div>
 
     <div class="above-game">
-      <p class="game-intro">Join Identical <strong>Cupcakes</strong>!</p>
+      <p class="game-intro">Join Identical <strong>Cupcakes</strong> — 5×5 Relax!</p>
       <a class="restart-button">New Game</a>
     </div>
 
@@ -100,8 +101,9 @@
         </div>
       </div>
 
-      <div class="grid-container">
+      <div class="grid-container grid-5x5">
         <div class="grid-row">
+          <div class="grid-cell"></div>
           <div class="grid-cell"></div>
           <div class="grid-cell"></div>
           <div class="grid-cell"></div>
@@ -112,14 +114,24 @@
           <div class="grid-cell"></div>
           <div class="grid-cell"></div>
           <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
         </div>
         <div class="grid-row">
           <div class="grid-cell"></div>
           <div class="grid-cell"></div>
           <div class="grid-cell"></div>
           <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
         </div>
         <div class="grid-row">
+          <div class="grid-cell"></div>
           <div class="grid-cell"></div>
           <div class="grid-cell"></div>
           <div class="grid-cell"></div>
@@ -140,33 +152,23 @@
         <p class="offline-subtitle">The game requires an active internet connection to function.</p>
       </div>
     </div>
-    <section aria-labelledby="how-to-play">
-      <h2 id="how-to-play">How to Play 2048 Cupcakes</h2>
-      <p>Slide the board using your arrow keys (or swipe on mobile). When two identical cupcakes collide, they combine into a richer cupcake and your score increases. Plan ahead, create open spaces, and chain merges to reach Rainbow Cupcake and beyond.</p>
-      <p><strong>Want to master the game?</strong> Check out our <a href="/2048-cupcakes/how-to-play/" title="Complete guide to playing 2048 Cupcakes">complete guide with strategies, tips, and all cupcake levels</a>.</p>
+    <section aria-labelledby="about-5x5">
+      <h2 id="about-5x5">About 5×5 Mode</h2>
+      <p>The 5×5 mode offers a more relaxed experience with 25 cells instead of 16. The extra space gives you more room to maneuver and plan your moves, making it perfect for beginners or when you want to achieve very high scores.</p>
+      <p><strong>Want to learn strategies?</strong> Check out our <a href="/2048-cupcakes/how-to-play/" title="Complete guide to playing 2048 Cupcakes">complete guide with strategies and tips</a>.</p>
     </section>
     <hr>
     <p class="tile-legend"><strong class="important">Tile Legend:</strong></p>
     <hr>
     <section aria-labelledby="strategy-tips">
-      <h2 id="strategy-tips">Strategy Tips</h2>
+      <h2 id="strategy-tips">5×5 Strategy Tips</h2>
       <ul>
-        <li>Pick a corner and keep your highest-value cupcake anchored there.</li>
-        <li>Avoid moves that break your stack; prefer two-direction play (e.g., only left and down).</li>
-        <li>Look for safe merges that don't trap low-value tiles.</li>
-        <li>Think one move ahead to prevent filling the board.</li>
+        <li>Take advantage of the extra space to build higher tile values.</li>
+        <li>Perfect for practicing the snake pattern strategy.</li>
+        <li>Aim for 4096 or even 8192 — it's much more achievable in this mode!</li>
+        <li>Experiment with different strategies since you have more room to recover from mistakes.</li>
       </ul>
-      <p>For advanced strategies, winning techniques, and common mistakes to avoid, visit our <a href="/2048-cupcakes/how-to-win/" title="How to win 2048 Cupcakes strategies">winning strategies guide</a>.</p>
-    </section>
-    <section aria-labelledby="faq">
-      <h2 id="faq">FAQ</h2>
-      <p><strong>Is 2048 Cupcakes free?</strong> Yes—play instantly in your browser with no sign-up.</p>
-      <p><strong>Does it work on phones?</strong> Absolutely. The game supports responsive layouts and touch controls.</p>
-      <p><strong>How do I save my best score?</strong> Your best score is stored locally in your browser.</p>
-      <p><strong>Can I install this game as an app?</strong> Yes! 2048 Cupcakes is a Progressive Web App (PWA). You can install it on your phone or computer for quick access. On mobile, look for the "Add to Home Screen" prompt, or use your browser's menu. On desktop, click the install icon in your browser's address bar.</p>
-      <p><strong>Does it work offline?</strong> No, the game requires an active internet connection to play. If you lose connection, you'll see a message asking you to reconnect to the internet.</p>
-      <p><strong>How do I add it to my home screen?</strong> On Android: Tap the menu (three dots) → "Add to Home screen" or "Install app". On iOS: Tap the Share button → "Add to Home Screen". On desktop browsers: Click the install icon in the address bar when available.</p>
-      <p><strong>Need more help?</strong> Read our comprehensive <a href="/2048-cupcakes/how-to-play/" title="How to play 2048 Cupcakes guide">how-to-play guide</a> with detailed strategies, all cupcake levels, and expert tips.</p>
+      <p>For advanced strategies and winning techniques, visit our <a href="/2048-cupcakes/how-to-win/" title="How to win 2048 Cupcakes strategies">winning strategies guide</a>.</p>
     </section>
     <hr>
     <p class="credits">
@@ -179,13 +181,14 @@
   {
     "@context": "https://schema.org",
     "@type": "Game",
-    "name": "2048 Cupcakes",
-    "description": "Merge cupcake tiles to reach 2048 in this free, browser-based puzzle game with keyboard and touch controls.",
+    "@id": "/2048-cupcakes/5x5/",
+    "name": "2048 Cupcakes 5x5",
+    "description": "Play 2048 Cupcakes in relaxing 5x5 mode with extra space for easier gameplay.",
     "genre": "Puzzle",
     "applicationCategory": "Game",
     "operatingSystem": "Browser",
     "image": "/style/img/1024.jpg",
-    "url": "/2048-cupcakes/"
+    "url": "/2048-cupcakes/5x5/"
   }
   </script>
 
@@ -274,7 +277,5 @@
       }, 5000);
     })();
   </script>
-
-  <!-- Analytics/ads can be added here by the site owner -->
 </body>
 </html>

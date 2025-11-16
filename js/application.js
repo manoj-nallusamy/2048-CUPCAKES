@@ -1,4 +1,5 @@
 // Wait till the browser is ready to render the game (avoids glitches)
 window.requestAnimationFrame(function () {
-  new GameManager(4, KeyboardInputManager, HTMLActuator, LocalStorageManager);
+  var gridSize = window.GameConfig ? window.GameConfig.getGridSize() : 4;
+  new GameManager(gridSize, KeyboardInputManager, HTMLActuator, LocalStorageManager);
 });
