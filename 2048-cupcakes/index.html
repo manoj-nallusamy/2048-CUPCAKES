@@ -7,11 +7,12 @@
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#f67070">
-  
+
+  <link rel="canonical" href="/2048-cupcakes/">
   <link rel="manifest" href="/manifest.json">
 
-  <link href="style/main.css" rel="stylesheet" type="text/css">
-  
+  <link href="/style/main.css" rel="stylesheet" type="text/css">
+
   <!-- Favicons for Google Search Results and browsers -->
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon.ico">
@@ -31,19 +32,19 @@
   <meta property="og:type" content="website">
   <meta property="og:title" content="Play 2048 Cupcakes — Merge Cupcake Tiles | Free Online Game">
   <meta property="og:description" content="Merge cupcake tiles to reach 2048. Fast, responsive, and fun puzzle you can play in your browser.">
-  <meta property="og:image" content="style/img/1024.jpg">
+  <meta property="og:image" content="/style/img/1024.jpg">
   <meta property="og:image:alt" content="2048 Cupcakes gameplay board">
+  <meta property="og:url" content="/2048-cupcakes/">
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Play 2048 Cupcakes — Free Online Puzzle">
   <meta name="twitter:description" content="Swipe or use arrow keys to combine cupcakes and score big.">
-  <meta name="twitter:image" content="style/img/1024.jpg">
+  <meta name="twitter:image" content="/style/img/1024.jpg">
 
-  <link rel="preload" href="style/fonts/ClearSans-Regular-webfont.woff" as="font" type="font/woff" crossorigin>
-  <link rel="preload" href="style/fonts/ClearSans-Bold-webfont.woff" as="font" type="font/woff" crossorigin>
+  <link rel="preload" href="/style/fonts/ClearSans-Regular-webfont.woff" as="font" type="font/woff" crossorigin>
+  <link rel="preload" href="/style/fonts/ClearSans-Bold-webfont.woff" as="font" type="font/woff" crossorigin>
 
   <!-- Google Analytics 4 -->
-  <!-- Replace G-XXXXXXXXXX with your actual Google Analytics Measurement ID -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-WNR2M1MHVH"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -77,10 +78,7 @@
 
     <div class="above-game">
       <p class="game-intro">Join Identical <strong>Cupcakes</strong>!</p>
-      <!-- <div style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;"> -->
-        <a class="restart-button">New Game</a>
-        <!-- <a href="/how-to-play-2048-cupcakes.html" style="font-size: 14px; color: #4d2523; text-decoration: underline; padding: 5px 10px; white-space: nowrap;" title="Learn how to play 2048 Cupcakes">How to Play</a> -->
-      <!-- </div> -->
+      <a class="restart-button">New Game</a>
     </div>
 
     <div class="game-container">
@@ -124,7 +122,7 @@
 
       </div>
     </div>
-    
+
     <!-- Offline message overlay -->
     <div id="offline-message" class="offline-overlay" style="display: none;">
       <div class="offline-content">
@@ -136,11 +134,6 @@
     <section aria-labelledby="how-to-play">
       <h2 id="how-to-play">How to Play 2048 Cupcakes</h2>
       <p>Slide the board using your arrow keys (or swipe on mobile). When two identical cupcakes collide, they combine into a richer cupcake and your score increases. Plan ahead, create open spaces, and chain merges to reach Rainbow Cupcake and beyond.</p>
-      <!-- <ul>
-        <li><strong>Keyboard:</strong> Use ↑ ↓ ← → to move.</li>
-        <li><strong>Mobile:</strong> Swipe in any direction.</li>
-        <li><strong>Goal:</strong> Merge cupcakes to reach the 2048 tile, then push your high score higher.</li>
-      </ul> -->
       <p><strong>Want to master the game?</strong> Check out our <a href="/2048-cupcakes/how-to-play/" title="Complete guide to playing 2048 Cupcakes">complete guide with strategies, tips, and all cupcake levels</a>.</p>
     </section>
     <hr>
@@ -182,23 +175,24 @@
     "genre": "Puzzle",
     "applicationCategory": "Game",
     "operatingSystem": "Browser",
-    "image": "style/img/1024.jpg"
+    "image": "/style/img/1024.jpg",
+    "url": "/2048-cupcakes/"
   }
   </script>
 
-  <script src="js/dark_mode.js"></script>
-  <script src="js/bind_polyfill.js" defer></script>
-  <script src="js/classlist_polyfill.js" defer></script>
-  <script src="js/animframe_polyfill.js" defer></script>
-  <script src="js/l10n.js" defer></script>
-  <script src="js/localization.js" defer></script>
-  <script src="js/keyboard_input_manager.js" defer></script>
-  <script src="js/html_actuator.js" defer></script>
-  <script src="js/grid.js" defer></script>
-  <script src="js/tile.js" defer></script>
-  <script src="js/local_storage_manager.js" defer></script>
-  <script src="js/game_manager.js" defer></script>
-  <script src="js/application.js" defer></script>
+  <script src="/js/dark_mode.js"></script>
+  <script src="/js/bind_polyfill.js" defer></script>
+  <script src="/js/classlist_polyfill.js" defer></script>
+  <script src="/js/animframe_polyfill.js" defer></script>
+  <script src="/js/l10n.js" defer></script>
+  <script src="/js/localization.js" defer></script>
+  <script src="/js/keyboard_input_manager.js" defer></script>
+  <script src="/js/html_actuator.js" defer></script>
+  <script src="/js/grid.js" defer></script>
+  <script src="/js/tile.js" defer></script>
+  <script src="/js/local_storage_manager.js" defer></script>
+  <script src="/js/game_manager.js" defer></script>
+  <script src="/js/application.js" defer></script>
   <script>
     window.twttr = (function (d,s,id) {
       var t, js, fjs = d.getElementsByTagName(s)[0];
@@ -207,7 +201,7 @@
       return window.twttr || (t = { _e: [], ready: function(f){ t._e.push(f) } });
     }(document, "script", "twitter-wjs"));
   </script>
-  
+
   <!-- Service Worker Registration for PWA -->
   <script>
     if ('serviceWorker' in navigator) {
@@ -222,13 +216,13 @@
       });
     }
   </script>
-  
+
   <!-- Offline Detection -->
   <script>
     (function() {
       var offlineMessage = document.getElementById('offline-message');
       var gameContainer = document.querySelector('.game-container');
-      
+
       function updateOfflineStatus() {
         if (!navigator.onLine) {
           offlineMessage.style.display = 'flex';
@@ -244,14 +238,14 @@
           }
         }
       }
-      
+
       // Check on load
       updateOfflineStatus();
-      
+
       // Listen for online/offline events
       window.addEventListener('online', updateOfflineStatus);
       window.addEventListener('offline', updateOfflineStatus);
-      
+
       // Also check periodically in case events don't fire
       setInterval(function() {
         fetch('/manifest.json', { method: 'HEAD', cache: 'no-cache' })
@@ -270,7 +264,7 @@
       }, 5000);
     })();
   </script>
-  
+
   <!-- Analytics/ads can be added here by the site owner -->
 </body>
 </html>
