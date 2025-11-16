@@ -683,7 +683,20 @@ body.dark-mode .toggle-icon {
   line-height: 42px;
   display: block;
   text-align: center;
-  float: right; }
+  float: right;
+}
+
+.restart-button .restart-text {
+  display: inline;
+}
+
+.restart-button .restart-icon {
+  display: none;
+  vertical-align: middle;
+  height: 24px;
+  width: 24px;
+  object-fit: contain;
+}
 
 .game-explanation {
   margin-top: 50px; }
@@ -1331,6 +1344,50 @@ body.dark-mode .toggle-icon {
   box-shadow: 0 0 15px rgba(246, 112, 112, 0.5);
 }
 
+/* Compact inline mode selector */
+.mode-buttons-inline {
+  float: left;
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+
+.mode-label {
+  color: var(--text-color);
+  font-weight: bold;
+  font-size: 13px;
+  margin-right: 3px;
+}
+
+.mode-button-inline {
+  display: inline-block;
+  padding: 5px 10px;
+  background: var(--score-bg);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 3px;
+  font-weight: bold;
+  font-size: 12px;
+  transition: all 0.2s ease;
+  border: 2px solid transparent;
+  white-space: nowrap;
+}
+
+.mode-button-inline .grid-size {
+  display: inline;
+}
+
+.mode-button-inline:hover {
+  background: var(--nav-link-hover-bg);
+  transform: translateY(-1px);
+}
+
+.mode-button-inline.active {
+  background: var(--guide-border-color);
+  border-color: var(--text-color);
+  box-shadow: 0 0 8px rgba(246, 112, 112, 0.4);
+}
+
 /* ========================================
    3x3 Grid Styles
    ======================================== */
@@ -1590,5 +1647,48 @@ body.dark-mode .toggle-icon {
   .mode-button {
     padding: 8px 12px;
     font-size: 14px;
+  }
+
+  /* Inline mode selector mobile */
+  .mode-buttons-inline {
+    float: left;
+    gap: 4px;
+    margin-bottom: 10px;
+    flex-wrap: nowrap;
+  }
+
+  .mode-label {
+    font-size: 12px;
+    width: auto;
+    margin-right: 3px;
+  }
+
+  .mode-button-inline {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+
+  .mode-button-inline .grid-size {
+    display: none;
+  }
+
+  .restart-button {
+    float: right;
+    width: auto;
+    padding: 8px;
+    min-width: auto;
+    height: auto;
+    line-height: 1;
+  }
+
+  .restart-button .restart-text {
+    display: none;
+  }
+
+  .restart-button .restart-icon {
+    display: block;
+    height: 24px;
+    width: 24px;
+    object-fit: contain;
   }
 }

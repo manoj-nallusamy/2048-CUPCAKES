@@ -2,7 +2,7 @@ String.toLocaleString({
 
 	"it": {
     "%game-intro"           : "Join Identical <strong>Cupcakes</strong>!",
-    "%restart-button"       : "New Game",
+    "%restart-button"       : "<span class=\"restart-text\">New Game</span><img src=\"/style/img/new-game.svg\" class=\"restart-icon\" alt=\"New Game\">",
     "%keep-playing-button"  : "Keep going",
     "%retry-button"         : "Retry",
     "%game-won"             : "You win!",
@@ -44,7 +44,7 @@ String.toLocaleString({
 
   "en": {
     "%game-intro"           : "Join Identical <strong>Cupcakes</strong>!",
-    "%restart-button"       : "New Game",
+    "%restart-button"       : "<span class=\"restart-text\">New Game</span><img src=\"/style/img/new-game.svg\" class=\"restart-icon\" alt=\"New Game\">",
     "%keep-playing-button"  : "Keep going",
     "%retry-button"         : "Retry",
     "%game-won"             : "You win!",
