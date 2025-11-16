@@ -702,3 +702,243 @@ $exponent: 1;
   margin-right: 20px;
   text-align: right;
 }
+
+// Guide pages (how-to-play, how-to-win) styles
+.guide-header {
+  text-align: center;
+  margin-bottom: 40px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid $game-container-background;
+}
+
+.guide-title {
+  font-size: 36px;
+  color: $text-color;
+  margin-bottom: 15px;
+}
+
+.guide-intro {
+  font-size: 18px;
+  color: #776e65;
+  max-width: 800px;
+  margin: 0 auto 20px;
+  line-height: 1.6;
+}
+
+.guide-nav {
+  margin-top: 20px;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.nav-link {
+  display: inline-block;
+  padding: 10px 20px;
+  background: $game-container-background;
+  color: white !important;
+  text-decoration: none !important;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+
+  &:hover {
+    background: darken($game-container-background, 10%);
+    color: white !important;
+  }
+}
+
+.guide-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.guide-section {
+  margin-bottom: 50px;
+  padding: 30px;
+  background: #faf8ef;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+
+  h2 {
+    color: $text-color;
+    font-size: 28px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid $game-container-background;
+    padding-bottom: 10px;
+  }
+
+  h3 {
+    color: #776e65;
+    font-size: 22px;
+    margin-top: 25px;
+    margin-bottom: 15px;
+  }
+
+  p {
+    line-height: 1.8;
+    color: $text-color;
+    margin-bottom: 15px;
+  }
+
+  ul {
+    margin: 15px 0;
+    padding-left: 30px;
+  }
+
+  li {
+    margin-bottom: 10px;
+    line-height: 1.6;
+    color: $text-color;
+  }
+}
+
+.levels-table {
+  overflow-x: auto;
+  margin: 20px 0;
+}
+
+.levels-table table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.levels-table th {
+  background: $game-container-background;
+  color: white;
+  padding: 12px;
+  text-align: left;
+  font-weight: bold;
+}
+
+.levels-table td {
+  padding: 10px 12px;
+  border-bottom: 1px solid #eee;
+  vertical-align: middle;
+}
+
+.cupcake-image {
+  text-align: center;
+  width: 80px;
+
+  img {
+    border-radius: 5px;
+    object-fit: cover;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+}
+
+.levels-table tr:hover {
+  background: #f9f9f9;
+
+  .cupcake-image img {
+    transform: scale(1.05);
+    transition: transform 0.2s ease;
+  }
+}
+
+.faq-item {
+  margin-bottom: 30px;
+  padding: 20px;
+  background: white;
+  border-radius: 5px;
+  border-left: 4px solid $game-container-background;
+
+  h3 {
+    color: $text-color;
+    margin-top: 0;
+    font-size: 20px;
+  }
+}
+
+.cta-link {
+  display: inline-block;
+  padding: 12px 24px;
+  background: $game-container-background;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  margin-top: 10px;
+
+  &:hover {
+    background: darken($game-container-background, 10%);
+  }
+}
+
+.guide-footer {
+  text-align: center;
+  margin-top: 50px;
+  padding-top: 30px;
+  border-top: 1px solid #ddd;
+  color: #8f7a66;
+}
+
+// Guide pages mobile styles - separate from main game
+@media screen and (max-width: $mobile-threshold) {
+  .guide-title {
+    font-size: 24px;
+  }
+
+  .guide-section {
+    padding: 20px;
+
+    h2 {
+      font-size: 22px;
+    }
+
+    h3 {
+      font-size: 18px;
+    }
+  }
+
+  .guide-content {
+    padding: 0 10px;
+  }
+
+  .levels-table {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin: 20px -20px;
+    padding: 0 20px;
+
+    table {
+      font-size: 11px;
+      min-width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+  }
+
+  .levels-table th,
+  .levels-table td {
+    padding: 6px 4px;
+    font-size: 11px;
+  }
+
+  .cupcake-image {
+    width: 40px;
+    padding: 2px;
+
+    img {
+      width: 36px;
+      height: 36px;
+    }
+  }
+
+  .guide-nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+
+    .nav-link {
+      width: 80%;
+      max-width: 280px;
+      text-align: center;
+    }
+  }
+}
