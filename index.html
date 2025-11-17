@@ -9,6 +9,7 @@
   <meta name="theme-color" content="#f67070">
   
   <link rel="canonical" href="/2048-cupcakes/">
+  <meta http-equiv="refresh" content="0;url=/2048-cupcakes/">
   <link rel="manifest" href="/manifest.json">
 
   <link href="style/main.css" rel="stylesheet" type="text/css">
@@ -43,6 +44,12 @@
   <link rel="preload" href="style/fonts/ClearSans-Regular-webfont.woff" as="font" type="font/woff" crossorigin>
   <link rel="preload" href="style/fonts/ClearSans-Bold-webfont.woff" as="font" type="font/woff" crossorigin>
 
+  <!-- Redirect to canonical URL -->
+  <script>
+    // Immediate redirect to canonical URL
+    window.location.replace('/2048-cupcakes/');
+  </script>
+
   <!-- Google Analytics 4 -->
   <!-- Replace G-XXXXXXXXXX with your actual Google Analytics Measurement ID -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-WNR2M1MHVH"></script>
@@ -59,6 +66,13 @@
 </head>
 <body>
   <div class="container">
+    <noscript>
+      <div style="padding: 20px; text-align: center; font-family: sans-serif;">
+        <h1>Redirecting...</h1>
+        <p>This page has moved to <a href="/2048-cupcakes/">2048 Cupcakes</a>.</p>
+        <p>If you are not redirected automatically, please <a href="/2048-cupcakes/">click here</a>.</p>
+      </div>
+    </noscript>
     <button id="dark-mode-toggle" class="dark-mode-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
       <span class="toggle-icon">🌙</span>
     </button>
