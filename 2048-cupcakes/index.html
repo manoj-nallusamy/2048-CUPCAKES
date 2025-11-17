@@ -44,16 +44,24 @@
   <link rel="preload" href="/style/fonts/ClearSans-Bold-webfont.woff" as="font" type="font/woff" crossorigin>
 
   <!-- Google Analytics 4 -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WNR2M1MHVH"></script>
   <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-WNR2M1MHVH', {
-      send_page_view: true,
-      anonymize_ip: true,
-      cookie_flags: 'SameSite=None;Secure'
-    });
+    // Only load Google Analytics if not on localhost
+    if (window.location.hostname !== 'localhost' && window.location.hostname !== '127.0.0.1') {
+      // Dynamically load GA script
+      var script = document.createElement('script');
+      script.async = true;
+      script.src = 'https://www.googletagmanager.com/gtag/js?id=G-WNR2M1MHVH';
+      document.head.appendChild(script);
+
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-WNR2M1MHVH', {
+        send_page_view: true,
+        anonymize_ip: true,
+        cookie_flags: 'SameSite=None;Secure'
+      });
+    }
   </script>
 </head>
 <body>
