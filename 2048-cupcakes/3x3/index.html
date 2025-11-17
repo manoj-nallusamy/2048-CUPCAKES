@@ -119,14 +119,6 @@
       </div>
     </div>
 
-    <!-- Offline message overlay -->
-    <div id="offline-message" class="offline-overlay" style="display: none;">
-      <div class="offline-content">
-        <h2>No Internet Connection</h2>
-        <p>Please connect to the internet to play 2048 Cupcakes.</p>
-        <p class="offline-subtitle">The game requires an active internet connection to function.</p>
-      </div>
-    </div>
     <section aria-labelledby="about-3x3">
       <h2 id="about-3x3">About 3×3 Mode</h2>
       <p>The 3×3 mode is the most challenging version of 2048 Cupcakes. With only 9 cells instead of 16, you have much less space to maneuver. This mode requires careful planning and expert strategy to reach high scores.</p>
@@ -150,6 +142,15 @@
       Cupcakes images by <a href="http://www.georgetowncupcake.com/" title="Georgetown Cupcake | DC Cupcakes | About">Georgetown Cupcake</a>.
     </p>
     <footer class="site-footer"><small>Inspired by <a href="https://github.com/0x0800/2048-CUPCAKES" rel="noopener">2048 CUPCAKES</a>. Original 2048 by <a href="http://gabrielecirulli.com" target="_blank" rel="noopener">Gabriele Cirulli</a>.</small></footer>
+  </div>
+
+  <!-- Offline message overlay (outside container to avoid scaling issues) -->
+  <div id="offline-message" class="offline-overlay" style="display: none;">
+    <div class="offline-content">
+      <h2>No Internet Connection</h2>
+      <p>Please connect to the internet to play 2048 Cupcakes.</p>
+      <p class="offline-subtitle">The game requires an active internet connection to function.</p>
+    </div>
   </div>
 
   <script type="application/ld+json">

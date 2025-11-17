@@ -127,14 +127,6 @@
       </div>
     </div>
 
-    <!-- Offline message overlay -->
-    <div id="offline-message" class="offline-overlay" style="display: none;">
-      <div class="offline-content">
-        <h2>No Internet Connection</h2>
-        <p>Please connect to the internet to play 2048 Cupcakes.</p>
-        <p class="offline-subtitle">The game requires an active internet connection to function.</p>
-      </div>
-    </div>
     <section aria-labelledby="how-to-play">
       <h2 id="how-to-play">How to Play 2048 Cupcakes</h2>
       <p>Slide the board using your arrow keys (or swipe on mobile). When two identical cupcakes collide, they combine into a richer cupcake and your score increases. Plan ahead, create open spaces, and chain merges to reach Rainbow Cupcake and beyond.</p>
@@ -168,6 +160,15 @@
       Cupcakes images by <a href="http://www.georgetowncupcake.com/" title="Georgetown Cupcake | DC Cupcakes | About">Georgetown Cupcake</a>.
     </p>
     <footer class="site-footer"><small>Inspired by <a href="https://github.com/0x0800/2048-CUPCAKES" rel="noopener">2048 CUPCAKES</a>. Original 2048 by <a href="http://gabrielecirulli.com" target="_blank" rel="noopener">Gabriele Cirulli</a>.</small></footer>
+  </div>
+
+  <!-- Offline message overlay (outside container to avoid scaling issues) -->
+  <div id="offline-message" class="offline-overlay" style="display: none;">
+    <div class="offline-content">
+      <h2>No Internet Connection</h2>
+      <p>Please connect to the internet to play 2048 Cupcakes.</p>
+      <p class="offline-subtitle">The game requires an active internet connection to function.</p>
+    </div>
   </div>
 
   <script type="application/ld+json">
