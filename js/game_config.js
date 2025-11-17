@@ -23,7 +23,12 @@
     },
 
     // Get storage key suffix for current mode
+    // 4x4 mode uses no suffix for backward compatibility
     getStorageSuffix: function() {
+      var size = this.getGridSize();
+      if (size === 4) {
+        return ''; // Standard 4x4 mode uses no suffix
+      }
       return '-' + this.getModeName();
     }
   };
