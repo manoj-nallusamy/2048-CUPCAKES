@@ -765,7 +765,8 @@ body.dark-mode .toggle-icon {
 
   body {
     margin: 20px 0;
-    padding: 0 20px; }
+    padding: 0 10px;
+    overflow-x: hidden; }
 
   h1.title {
     font-size: 27px;
@@ -775,7 +776,49 @@ body.dark-mode .toggle-icon {
 
   .container {
     width: 280px;
-    margin: 0 auto; }
+    margin: 0 auto;
+    transform-origin: top center; }
+
+  /* Dark mode toggle - smaller on mobile */
+  .dark-mode-toggle {
+    width: 36px;
+    height: 36px;
+    top: 10px;
+    right: 10px;
+  }
+
+  .toggle-icon {
+    font-size: 18px;
+  }
+
+  /* Scale up game container on wider mobile screens */
+  @media screen and (min-width: 360px) {
+    .container {
+      transform: scale(1.14);
+      margin-bottom: 40px;
+    }
+  }
+
+  @media screen and (min-width: 400px) {
+    .container {
+      transform: scale(1.29);
+      margin-bottom: 80px;
+    }
+  }
+
+  @media screen and (min-width: 440px) {
+    .container {
+      transform: scale(1.43);
+      margin-bottom: 120px;
+    }
+  }
+
+  @media screen and (min-width: 480px) {
+    .container {
+      transform: scale(1.57);
+      margin-bottom: 160px;
+    }
+  }
 
   .score-container, .best-container,
   .score-points, .best-points {
