@@ -283,7 +283,14 @@ GameManager.prototype.move = function (direction) {
           tile.updatePosition(positions.next);
 
           // Update the score
-          self.points += kcal(tile.value) * 2;
+          // Classic version: standard 2048 scoring (points = merged tile value)
+          // Cupcakes version: use kcal function
+          var isClassicTheme = window.GameConfig && window.GameConfig.isClassic();
+          if (isClassicTheme) {
+            self.points += merged.value;
+          } else {
+            self.points += kcal(tile.value) * 2;
+          }
           if (merged.value > self.score) self.score = merged.value;
 
           // The mighty 2048 tile
