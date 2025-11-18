@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>How to Win 2048 - Strategies & Tips</title>
+  <meta name="description" content="Master 2048 with proven strategies. Learn the corner strategy, snake pattern, and tips to achieve high scores and reach the 2048 tile.">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#f67070">
+
+  <link rel="canonical" href="/2048-classic/how-to-win/">
+  <link rel="manifest" href="/manifest.json">
+  <link href="/style/main.css" rel="stylesheet" type="text/css">
+
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/meta/apple-touch-icon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="How to Win 2048 - Strategies & Tips">
+  <meta property="og:description" content="Master 2048 with proven winning strategies.">
+  <meta property="og:url" content="/2048-classic/how-to-win/">
+
+  <link rel="preload" href="/style/fonts/ClearSans-Regular-webfont.woff" as="font" type="font/woff" crossorigin>
+
+  <!-- Google Analytics 4 -->
+  <script>
+    if (window.location.hostname !== 'localhost' && window.location.hostname !== '127.0.0.1') {
+      var script = document.createElement('script');
+      script.async = true;
+      script.src = 'https://www.googletagmanager.com/gtag/js?id=G-WNR2M1MHVH';
+      document.head.appendChild(script);
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-WNR2M1MHVH', { send_page_view: true, anonymize_ip: true });
+    }
+  </script>
+</head>
+<body>
+  <div class="theme-switcher">
+    <a href="/2048-cupcakes/how-to-win/">Cupcakes</a>
+    <a href="/2048-classic/how-to-win/" class="active">Classic</a>
+  </div>
+  <div class="container">
+    <button id="dark-mode-toggle" class="dark-mode-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+      <span class="toggle-icon">🌙</span>
+    </button>
+    <header class="guide-header">
+      <h1 class="guide-title">How to Win 2048 - Strategies & Tips</h1>
+      <p class="guide-intro">Master the game with these proven strategies used by top players to achieve high scores.</p>
+      <nav class="guide-nav">
+        <a href="/2048-classic/" class="nav-link">← Back to Game</a>
+        <a href="/2048-classic/how-to-play/" class="nav-link">How to Play</a>
+      </nav>
+    </header>
+
+    <article class="guide-content">
+      <section id="corner-strategy" class="guide-section">
+        <h2>The Corner Strategy</h2>
+        <p>The most important rule in 2048: <strong>Pick a corner and keep your highest tile there at all times.</strong></p>
+        <p>Most players choose the bottom-left or bottom-right corner. Once you choose, never let your highest tile leave that position.</p>
+        <h3>How to Implement:</h3>
+        <ol>
+          <li>Choose a corner (e.g., bottom-left)</li>
+          <li>Use only two primary directions (e.g., down and left)</li>
+          <li>Use the third direction (right) only when absolutely necessary</li>
+          <li>Never use the opposite direction (up) unless forced</li>
+        </ol>
+      </section>
+
+      <section id="snake-pattern" class="guide-section">
+        <h2>The Snake Pattern</h2>
+        <p>Build your tiles in a snake-like pattern from the corner. This keeps tiles organized and maximizes merge opportunities.</p>
+        <p>For a bottom-left corner strategy:</p>
+        <ul>
+          <li>Highest tile in bottom-left</li>
+          <li>Second highest to its right</li>
+          <li>Continue along the bottom row</li>
+          <li>Then snake up to the next row</li>
+        </ul>
+      </section>
+
+      <section id="tips" class="guide-section">
+        <h2>Essential Tips</h2>
+        <ul>
+          <li><strong>Think ahead:</strong> Plan 2-3 moves in advance</li>
+          <li><strong>Avoid trapping tiles:</strong> Don't let small tiles get stuck between large ones</li>
+          <li><strong>Keep the board open:</strong> Maintain empty spaces for maneuvering</li>
+          <li><strong>Don't chase merges:</strong> Sometimes it's better to wait for a better opportunity</li>
+          <li><strong>Stay calm:</strong> When the board fills up, don't panic - look for the best move</li>
+        </ul>
+      </section>
+
+      <section id="mistakes" class="guide-section">
+        <h2>Common Mistakes to Avoid</h2>
+        <ul>
+          <li>Moving your highest tile out of the corner</li>
+          <li>Using all four directions randomly</li>
+          <li>Not planning ahead</li>
+          <li>Getting tunnel vision on one merge</li>
+          <li>Panicking when the board gets full</li>
+        </ul>
+      </section>
+
+      <section id="practice" class="guide-section">
+        <h2>Practice Makes Perfect</h2>
+        <p>Start with <a href="/2048-classic/5x5/">5×5 mode</a> to practice strategies with more room for error. Once comfortable, try the <a href="/2048-classic/">standard 4×4</a>, then challenge yourself with <a href="/2048-classic/3x3/">3×3 hard mode</a>!</p>
+      </section>
+    </article>
+
+    <footer class="site-footer"><small>Original 2048 by <a href="http://gabrielecirulli.com" target="_blank" rel="noopener">Gabriele Cirulli</a>.</small></footer>
+  </div>
+
+  <script src="/js/dark_mode.js"></script>
+</body>
+</html>

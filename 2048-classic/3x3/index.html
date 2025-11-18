@@ -2,23 +2,18 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Play 2048 Cupcakes 3x3 Mode — Challenging Puzzle Game</title>
-  <meta name="description" content="Play 2048 Cupcakes in 3x3 mode. A more challenging version with less space. Merge delicious cupcake tiles to reach 2048 and beyond.">
+  <title>Play 2048 Classic 3x3 — Hard Mode | Free Online Game</title>
+  <meta name="description" content="Play 2048 Classic in challenging 3x3 mode. Limited space makes every move count. Test your skills with this hard mode puzzle.">
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#f67070">
 
-  <link rel="canonical" content="/2048-cupcakes/3x3/">
   <link rel="manifest" href="/manifest.json">
 
   <link href="/style/main.css" rel="stylesheet" type="text/css">
 
-  <!-- Favicons for Google Search Results and browsers -->
+  <!-- Favicons -->
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon.ico">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon.ico">
-  <link rel="icon" type="image/png" sizes="48x48" href="/favicon.ico">
-  <link rel="icon" type="image/png" sizes="96x96" href="/favicon.ico">
   <link rel="icon" type="image/png" sizes="192x192" href="/meta/apple-touch-icon.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/meta/apple-touch-icon.png">
   <meta name="mobile-web-app-capable" content="yes">
@@ -30,15 +25,14 @@
   <meta name="format-detection" content="telephone=no" />
 
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Play 2048 Cupcakes 3x3 Mode — Challenging Puzzle Game">
-  <meta property="og:description" content="Play 2048 Cupcakes in challenging 3x3 mode. Less space, more strategy!">
+  <meta property="og:title" content="Play 2048 Classic 3x3 — Hard Mode">
+  <meta property="og:description" content="Challenge yourself with 2048 in a tiny 3x3 grid.">
   <meta property="og:image" content="/style/img/1024.jpg">
-  <meta property="og:image:alt" content="2048 Cupcakes 3x3 gameplay board">
-  <meta property="og:url" content="/2048-cupcakes/3x3/">
+  <meta property="og:url" content="/2048-classic/3x3/">
 
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Play 2048 Cupcakes 3x3 — Challenging Mode">
-  <meta name="twitter:description" content="Test your skills with the 3x3 mode. More challenging with less space!">
+  <meta name="twitter:title" content="Play 2048 Classic 3x3 — Hard Mode">
+  <meta name="twitter:description" content="The ultimate 2048 challenge in a 3x3 grid.">
   <meta name="twitter:image" content="/style/img/1024.jpg">
 
   <link rel="preload" href="/style/fonts/ClearSans-Regular-webfont.woff" as="font" type="font/woff" crossorigin>
@@ -46,9 +40,7 @@
 
   <!-- Google Analytics 4 -->
   <script>
-    // Only load Google Analytics if not on localhost
     if (window.location.hostname !== 'localhost' && window.location.hostname !== '127.0.0.1') {
-      // Dynamically load GA script
       var script = document.createElement('script');
       script.async = true;
       script.src = 'https://www.googletagmanager.com/gtag/js?id=G-WNR2M1MHVH';
@@ -65,10 +57,10 @@
     }
   </script>
 </head>
-<body>
+<body class="classic-theme">
   <div class="theme-switcher">
-    <a href="/2048-cupcakes/3x3/" class="active">Cupcakes</a>
-    <a href="/2048-classic/3x3/">Classic</a>
+    <a href="/2048-cupcakes/3x3/">Cupcakes</a>
+    <a href="/2048-classic/3x3/" class="active">Classic</a>
   </div>
   <div class="container">
     <button id="dark-mode-toggle" class="dark-mode-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
@@ -76,24 +68,20 @@
     </button>
     <div class="heading">
       <div class="title-container">
-        <h1 class="title">2048 <small>Cupcakes</small></h1>
+        <h1 class="title">2048 <small>Classic</small></h1>
       </div>
-			<div class="scores-container">
-				<div class="score-points">0</div>
-				<div class="best-points">0</div>
-			</div>
       <div class="scores-container">
-        <div class="score-container">0 Kcal</div>
-        <div class="best-container">0 Kcal</div>
+        <div class="score-container">0</div>
+        <div class="best-container">0</div>
       </div>
     </div>
 
     <div class="above-game">
       <div class="mode-buttons-inline">
         <span class="mode-label">Mode:</span>
-        <a href="/2048-cupcakes/3x3/" class="mode-button-inline active" title="Hard - 3×3 Grid">Hard<span class="grid-size"> (3×3)</span></a>
-        <a href="/2048-cupcakes/" class="mode-button-inline" title="Standard - 4×4 Grid">Standard<span class="grid-size"> (4×4)</span></a>
-        <a href="/2048-cupcakes/5x5/" class="mode-button-inline" title="Easy - 5×5 Grid">Easy<span class="grid-size"> (5×5)</span></a>
+        <a href="/2048-classic/3x3/" class="mode-button-inline active" title="Hard - 3×3 Grid">Hard<span class="grid-size"> (3×3)</span></a>
+        <a href="/2048-classic/" class="mode-button-inline" title="Standard - 4×4 Grid">Standard<span class="grid-size"> (4×4)</span></a>
+        <a href="/2048-classic/5x5/" class="mode-button-inline" title="Easy - 5×5 Grid">Easy<span class="grid-size"> (5×5)</span></a>
       </div>
       <a class="restart-button"><span class="restart-text">New Game</span><img src="/style/img/new-game.svg" class="restart-icon" alt="New Game"></a>
     </div>
@@ -133,11 +121,9 @@
 
     <section aria-labelledby="about-3x3">
       <h2 id="about-3x3">About 3×3 Mode</h2>
-      <p>The 3×3 mode is the most challenging version of 2048 Cupcakes. With only 9 cells instead of 16, you have much less space to maneuver. This mode requires careful planning and expert strategy to reach high scores.</p>
-      <p><strong>Want to learn strategies?</strong> Check out our <a href="/2048-cupcakes/how-to-play/" title="Complete guide to playing 2048 Cupcakes">complete guide with strategies and tips</a>.</p>
+      <p>The 3×3 mode is the most challenging version of 2048 Classic. With only 9 cells instead of 16, you have much less space to maneuver. This mode requires careful planning and expert strategy to reach high scores.</p>
+      <p><strong>Want to learn strategies?</strong> Check out our <a href="/2048-classic/how-to-play/" title="Complete guide to playing 2048">complete guide with strategies and tips</a>.</p>
     </section>
-    <hr>
-    <p class="tile-legend"><strong class="important">Tile Legend:</strong></p>
     <hr>
     <section aria-labelledby="strategy-tips">
       <h2 id="strategy-tips">3×3 Strategy Tips</h2>
@@ -147,20 +133,17 @@
         <li>Think 3-4 moves ahead; every move counts in this challenging mode.</li>
         <li>Don't panic when the board fills up; stay calm and find the best move.</li>
       </ul>
-      <p>For advanced strategies and winning techniques, visit our <a href="/2048-cupcakes/how-to-win/" title="How to win 2048 Cupcakes strategies">winning strategies guide</a>.</p>
+      <p>For advanced strategies and winning techniques, visit our <a href="/2048-classic/how-to-win/" title="How to win 2048 strategies">winning strategies guide</a>.</p>
     </section>
     <hr>
-    <p class="credits">
-      Cupcakes images by <a href="http://www.georgetowncupcake.com/" title="Georgetown Cupcake | DC Cupcakes | About">Georgetown Cupcake</a>.
-    </p>
-    <footer class="site-footer"><small>Inspired by <a href="https://github.com/0x0800/2048-CUPCAKES" rel="noopener">2048 CUPCAKES</a>. Original 2048 by <a href="http://gabrielecirulli.com" target="_blank" rel="noopener">Gabriele Cirulli</a>.</small></footer>
+    <footer class="site-footer"><small>Original 2048 by <a href="http://gabrielecirulli.com" target="_blank" rel="noopener">Gabriele Cirulli</a>.</small></footer>
   </div>
 
   <!-- Offline message overlay (outside container to avoid scaling issues) -->
   <div id="offline-message" class="offline-overlay" style="display: none;">
     <div class="offline-content">
       <h2>No Internet Connection</h2>
-      <p>Please connect to the internet to play 2048 Cupcakes.</p>
+      <p>Please connect to the internet to play 2048 Classic.</p>
       <p class="offline-subtitle">The game requires an active internet connection to function.</p>
     </div>
   </div>
@@ -169,14 +152,14 @@
   {
     "@context": "https://schema.org",
     "@type": "Game",
-    "@id": "/2048-cupcakes/3x3/",
-    "name": "2048 Cupcakes 3x3",
-    "description": "Play 2048 Cupcakes in challenging 3x3 mode with limited space.",
+    "@id": "/2048-classic/3x3/",
+    "name": "2048 Classic 3x3",
+    "description": "Play 2048 Classic in challenging 3x3 mode with limited space.",
     "genre": "Puzzle",
     "applicationCategory": "Game",
     "operatingSystem": "Browser",
     "image": "/style/img/1024.jpg",
-    "url": "/2048-cupcakes/3x3/"
+    "url": "/2048-classic/3x3/"
   }
   </script>
 
@@ -203,7 +186,6 @@
     }(document, "script", "twitter-wjs"));
   </script>
 
-  <!-- Service Worker Registration for PWA -->
   <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', function() {
@@ -218,7 +200,6 @@
     }
   </script>
 
-  <!-- Offline Detection -->
   <script>
     (function() {
       var offlineMessage = document.getElementById('offline-message');
@@ -240,27 +221,17 @@
         }
       }
 
-      // Check on load
       updateOfflineStatus();
-
-      // Listen for online/offline events
       window.addEventListener('online', updateOfflineStatus);
       window.addEventListener('offline', updateOfflineStatus);
 
-      // Also check periodically in case events don't fire
       setInterval(function() {
         fetch('/manifest.json', { method: 'HEAD', cache: 'no-cache' })
           .then(function() {
-            if (!navigator.onLine) {
-              // Force update if we detect connection
-              updateOfflineStatus();
-            }
+            if (!navigator.onLine) updateOfflineStatus();
           })
           .catch(function() {
-            // Network error - we're offline
-            if (navigator.onLine) {
-              updateOfflineStatus();
-            }
+            if (navigator.onLine) updateOfflineStatus();
           });
       }, 5000);
     })();

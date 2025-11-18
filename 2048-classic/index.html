@@ -2,13 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Play 2048 Cupcakes 3x3 Mode — Challenging Puzzle Game</title>
-  <meta name="description" content="Play 2048 Cupcakes in 3x3 mode. A more challenging version with less space. Merge delicious cupcake tiles to reach 2048 and beyond.">
+  <title>Play 2048 Classic — Original Number Puzzle | Free Online Game</title>
+  <meta name="description" content="Play the classic 2048 puzzle game online. Merge number tiles to reach 2048 and beyond. Smooth gameplay, keyboard and swipe controls.">
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#f67070">
 
-  <link rel="canonical" content="/2048-cupcakes/3x3/">
   <link rel="manifest" href="/manifest.json">
 
   <link href="/style/main.css" rel="stylesheet" type="text/css">
@@ -30,15 +29,15 @@
   <meta name="format-detection" content="telephone=no" />
 
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Play 2048 Cupcakes 3x3 Mode — Challenging Puzzle Game">
-  <meta property="og:description" content="Play 2048 Cupcakes in challenging 3x3 mode. Less space, more strategy!">
+  <meta property="og:title" content="Play 2048 Classic — Original Number Puzzle | Free Online Game">
+  <meta property="og:description" content="Merge number tiles to reach 2048. Fast, responsive, and fun puzzle you can play in your browser.">
   <meta property="og:image" content="/style/img/1024.jpg">
-  <meta property="og:image:alt" content="2048 Cupcakes 3x3 gameplay board">
-  <meta property="og:url" content="/2048-cupcakes/3x3/">
+  <meta property="og:image:alt" content="2048 Classic gameplay board">
+  <meta property="og:url" content="/2048-classic/">
 
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Play 2048 Cupcakes 3x3 — Challenging Mode">
-  <meta name="twitter:description" content="Test your skills with the 3x3 mode. More challenging with less space!">
+  <meta name="twitter:title" content="Play 2048 Classic — Free Online Puzzle">
+  <meta name="twitter:description" content="Swipe or use arrow keys to combine numbers and score big.">
   <meta name="twitter:image" content="/style/img/1024.jpg">
 
   <link rel="preload" href="/style/fonts/ClearSans-Regular-webfont.woff" as="font" type="font/woff" crossorigin>
@@ -65,10 +64,10 @@
     }
   </script>
 </head>
-<body>
+<body class="classic-theme">
   <div class="theme-switcher">
-    <a href="/2048-cupcakes/3x3/" class="active">Cupcakes</a>
-    <a href="/2048-classic/3x3/">Classic</a>
+    <a href="/2048-cupcakes/">Cupcakes</a>
+    <a href="/2048-classic/" class="active">Classic</a>
   </div>
   <div class="container">
     <button id="dark-mode-toggle" class="dark-mode-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
@@ -76,24 +75,20 @@
     </button>
     <div class="heading">
       <div class="title-container">
-        <h1 class="title">2048 <small>Cupcakes</small></h1>
+        <h1 class="title">2048 <small>Classic</small></h1>
       </div>
-			<div class="scores-container">
-				<div class="score-points">0</div>
-				<div class="best-points">0</div>
-			</div>
       <div class="scores-container">
-        <div class="score-container">0 Kcal</div>
-        <div class="best-container">0 Kcal</div>
+        <div class="score-container">0</div>
+        <div class="best-container">0</div>
       </div>
     </div>
 
     <div class="above-game">
       <div class="mode-buttons-inline">
         <span class="mode-label">Mode:</span>
-        <a href="/2048-cupcakes/3x3/" class="mode-button-inline active" title="Hard - 3×3 Grid">Hard<span class="grid-size"> (3×3)</span></a>
-        <a href="/2048-cupcakes/" class="mode-button-inline" title="Standard - 4×4 Grid">Standard<span class="grid-size"> (4×4)</span></a>
-        <a href="/2048-cupcakes/5x5/" class="mode-button-inline" title="Easy - 5×5 Grid">Easy<span class="grid-size"> (5×5)</span></a>
+        <a href="/2048-classic/3x3/" class="mode-button-inline" title="Hard - 3×3 Grid">Hard<span class="grid-size"> (3×3)</span></a>
+        <a href="/2048-classic/" class="mode-button-inline active" title="Standard - 4×4 Grid">Standard<span class="grid-size"> (4×4)</span></a>
+        <a href="/2048-classic/5x5/" class="mode-button-inline" title="Easy - 5×5 Grid">Easy<span class="grid-size"> (5×5)</span></a>
       </div>
       <a class="restart-button"><span class="restart-text">New Game</span><img src="/style/img/new-game.svg" class="restart-icon" alt="New Game"></a>
     </div>
@@ -108,8 +103,9 @@
         </div>
       </div>
 
-      <div class="grid-container grid-3x3">
+      <div class="grid-container">
         <div class="grid-row">
+          <div class="grid-cell"></div>
           <div class="grid-cell"></div>
           <div class="grid-cell"></div>
           <div class="grid-cell"></div>
@@ -118,8 +114,16 @@
           <div class="grid-cell"></div>
           <div class="grid-cell"></div>
           <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
         </div>
         <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+        <div class="grid-row">
+          <div class="grid-cell"></div>
           <div class="grid-cell"></div>
           <div class="grid-cell"></div>
           <div class="grid-cell"></div>
@@ -131,36 +135,38 @@
       </div>
     </div>
 
-    <section aria-labelledby="about-3x3">
-      <h2 id="about-3x3">About 3×3 Mode</h2>
-      <p>The 3×3 mode is the most challenging version of 2048 Cupcakes. With only 9 cells instead of 16, you have much less space to maneuver. This mode requires careful planning and expert strategy to reach high scores.</p>
-      <p><strong>Want to learn strategies?</strong> Check out our <a href="/2048-cupcakes/how-to-play/" title="Complete guide to playing 2048 Cupcakes">complete guide with strategies and tips</a>.</p>
+    <section aria-labelledby="how-to-play">
+      <h2 id="how-to-play">How to Play 2048</h2>
+      <p>Use your arrow keys (or swipe on mobile) to move the tiles. When two tiles with the same number collide, they merge into one with the combined value. Reach the 2048 tile to win, then keep going for a higher score!</p>
+      <p><strong>Want to master the game?</strong> Check out our <a href="/2048-classic/how-to-play/" title="Complete guide to playing 2048">complete guide with strategies and tips</a>.</p>
     </section>
-    <hr>
-    <p class="tile-legend"><strong class="important">Tile Legend:</strong></p>
     <hr>
     <section aria-labelledby="strategy-tips">
-      <h2 id="strategy-tips">3×3 Strategy Tips</h2>
+      <h2 id="strategy-tips">Strategy Tips</h2>
       <ul>
-        <li>Space is limited! Keep your highest tile in one corner at all costs.</li>
-        <li>Use only two directions — breaking this rule almost guarantees a game over.</li>
-        <li>Think 3-4 moves ahead; every move counts in this challenging mode.</li>
-        <li>Don't panic when the board fills up; stay calm and find the best move.</li>
+        <li>Pick a corner and keep your highest-value tile anchored there.</li>
+        <li>Avoid moves that break your stack; prefer two-direction play (e.g., only left and down).</li>
+        <li>Look for safe merges that don't trap low-value tiles.</li>
+        <li>Think one move ahead to prevent filling the board.</li>
       </ul>
-      <p>For advanced strategies and winning techniques, visit our <a href="/2048-cupcakes/how-to-win/" title="How to win 2048 Cupcakes strategies">winning strategies guide</a>.</p>
+      <p>For advanced strategies, winning techniques, and common mistakes to avoid, visit our <a href="/2048-classic/how-to-win/" title="How to win 2048 strategies">winning strategies guide</a>.</p>
+    </section>
+    <section aria-labelledby="faq">
+      <h2 id="faq">FAQ</h2>
+      <p><strong>Is 2048 free?</strong> Yes—play instantly in your browser with no sign-up.</p>
+      <p><strong>Does it work on phones?</strong> Absolutely. The game supports responsive layouts and touch controls.</p>
+      <p><strong>How do I save my best score?</strong> Your best score is stored locally in your browser.</p>
+      <p><strong>Need more help?</strong> Read our comprehensive <a href="/2048-classic/how-to-play/" title="How to play 2048 guide">how-to-play guide</a> with detailed strategies and expert tips.</p>
     </section>
     <hr>
-    <p class="credits">
-      Cupcakes images by <a href="http://www.georgetowncupcake.com/" title="Georgetown Cupcake | DC Cupcakes | About">Georgetown Cupcake</a>.
-    </p>
-    <footer class="site-footer"><small>Inspired by <a href="https://github.com/0x0800/2048-CUPCAKES" rel="noopener">2048 CUPCAKES</a>. Original 2048 by <a href="http://gabrielecirulli.com" target="_blank" rel="noopener">Gabriele Cirulli</a>.</small></footer>
+    <footer class="site-footer"><small>Original 2048 by <a href="http://gabrielecirulli.com" target="_blank" rel="noopener">Gabriele Cirulli</a>.</small></footer>
   </div>
 
   <!-- Offline message overlay (outside container to avoid scaling issues) -->
   <div id="offline-message" class="offline-overlay" style="display: none;">
     <div class="offline-content">
       <h2>No Internet Connection</h2>
-      <p>Please connect to the internet to play 2048 Cupcakes.</p>
+      <p>Please connect to the internet to play 2048 Classic.</p>
       <p class="offline-subtitle">The game requires an active internet connection to function.</p>
     </div>
   </div>
@@ -169,14 +175,13 @@
   {
     "@context": "https://schema.org",
     "@type": "Game",
-    "@id": "/2048-cupcakes/3x3/",
-    "name": "2048 Cupcakes 3x3",
-    "description": "Play 2048 Cupcakes in challenging 3x3 mode with limited space.",
+    "name": "2048 Classic",
+    "description": "Merge number tiles to reach 2048 in this free, browser-based puzzle game with keyboard and touch controls.",
     "genre": "Puzzle",
     "applicationCategory": "Game",
     "operatingSystem": "Browser",
     "image": "/style/img/1024.jpg",
-    "url": "/2048-cupcakes/3x3/"
+    "url": "/2048-classic/"
   }
   </script>
 

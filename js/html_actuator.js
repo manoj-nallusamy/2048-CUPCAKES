@@ -10,6 +10,9 @@ function HTMLActuator() {
   this.score = 0;
   this.points = 0;
 
+  // Detect theme
+  this.isClassic = window.GameConfig && window.GameConfig.isClassic();
+
   // Add grid size class to tile container based on GameConfig
   if (window.GameConfig) {
     var gridSize = window.GameConfig.getGridSize();
@@ -65,7 +68,6 @@ HTMLActuator.prototype.addTile = function (tile) {
 
   var wrapper   = document.createElement("div");
   var inner     = document.createElement("div");
-  var img       = document.createElement("img");
   var position  = tile.previousPosition || { x: tile.x, y: tile.y };
   var positionClass = this.positionClass(position);
 
@@ -77,11 +79,19 @@ HTMLActuator.prototype.addTile = function (tile) {
   this.applyClasses(wrapper, classes);
 
   inner.classList.add("tile-inner");
-  // inner.textContent = tile.value;
-  // img.style.width = '100%';
-  img.src = "/style/img/" + tile.value + ".jpg";
-  img.alt = Localize(tile.value) + " cupcake tile";
-  inner.appendChild(img);
+
+  // Render based on theme (check at render time for reliability)
+  var isClassicTheme = window.GameConfig && window.GameConfig.isClassic();
+  if (isClassicTheme) {
+    // Classic theme: show numbers
+    inner.textContent = tile.value;
+  } else {
+    // Cupcakes theme: show images
+    var img = document.createElement("img");
+    img.src = "/style/img/" + tile.value + ".jpg";
+    img.alt = Localize(tile.value) + " cupcake tile";
+    inner.appendChild(img);
+  }
 
   if (tile.previousPosition) {
     // Make sure that the tile gets rendered in the previous position first
@@ -124,40 +134,60 @@ HTMLActuator.prototype.positionClass = function (position) {
 
 HTMLActuator.prototype.updateScore = function (score, points) {
   this.clearContainer(this.scoreContainer);
-  this.clearContainer(this.scorePoints);
+  if (this.scorePoints) {
+    this.clearContainer(this.scorePoints);
+  }
 
   var difference = score - this.score;
   this.score = score;
-	var pointDifference = points - this.points;
-	this.points = points;
+  var pointDifference = points - this.points;
+  this.points = points;
 
-  // this.scoreContainer.textContent = this.score;
-	this.scorePoints.textContent = this.points;
-  this.scoreContainer.textContent = Localize( "p" + this.score );
+  var isClassicTheme = window.GameConfig && window.GameConfig.isClassic();
+
+  if (isClassicTheme) {
+    // Classic theme: show just points in single score box
+    this.scoreContainer.textContent = this.points;
+  } else {
+    // Cupcakes theme: show Kcal format in both boxes
+    if (this.scorePoints) {
+      this.scorePoints.textContent = this.points;
+    }
+    this.scoreContainer.textContent = Localize( "p" + this.score );
+  }
 
   if (difference > 0) {
     var addition = document.createElement("div");
     addition.classList.add("score-addition");
-    // addition.textContent = "+" + difference;
-    addition.textContent = Localize( "p" + this.score );
-
+    if (isClassicTheme) {
+      addition.textContent = "+" + pointDifference;
+    } else {
+      addition.textContent = Localize( "p" + this.score );
+    }
     this.scoreContainer.appendChild(addition);
   }
 
-	if (pointDifference > 0) {
-		var punti = document.createElement("div");
-		punti.classList.add("score-addition");
-		punti.textContent = "+" + pointDifference;
-		this.scorePoints.appendChild(punti);
-	}
+  if (pointDifference > 0 && this.scorePoints) {
+    var punti = document.createElement("div");
+    punti.classList.add("score-addition");
+    punti.textContent = "+" + pointDifference;
+    this.scorePoints.appendChild(punti);
+  }
 };
 
 HTMLActuator.prototype.updateBestScore = function (bestScore, bestPoints) {
-  this.bestContainer.textContent = Localize( "p" + bestScore);
-  this.bestPoints.textContent = bestPoints;
+  var isClassicTheme = window.GameConfig && window.GameConfig.isClassic();
 
-	// var difference = score - this.score;
-	// this.score = score;
+  if (isClassicTheme) {
+    // Classic theme: show just points in single best box
+    this.bestContainer.textContent = bestPoints;
+  } else {
+    // Cupcakes theme: show in both boxes
+    this.bestContainer.textContent = Localize( "p" + bestScore);
+    if (this.bestPoints) {
+      this.bestPoints.textContent = bestPoints;
+    }
+  }
 };
 
 HTMLActuator.prototype.message = function (won) {
@@ -187,7 +217,12 @@ HTMLActuator.prototype.scoreTweetButton = function () {
   tweet.setAttribute("data-counturl", "http://0x0800.github.io/2048-CUPCAKES");
   tweet.textContent = "Tweet";
 
-  var text = Localize("tweet1") + Localize( this.score ).toUpperCase() + '", ' + this.points + " Kcal " + Localize("tweet2");
+  var text;
+  if (this.isClassic) {
+    text = "I scored " + this.points + " points in 2048 Classic!";
+  } else {
+    text = Localize("tweet1") + Localize( this.score ).toUpperCase() + '", ' + this.points + " Kcal " + Localize("tweet2");
+  }
   tweet.setAttribute("data-text", text);
 
   return tweet;

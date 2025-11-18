@@ -142,6 +142,12 @@ GameManager.prototype.localizeElements = function () {
 GameManager.prototype.fillLegend = function () {
 
   var legend = document.getElementsByClassName("tile-legend");
+
+  // Only fill legend if the element exists (cupcakes theme only)
+  if (legend.length === 0) {
+    return;
+  }
+
   for (var i = 1; i <= 13; i++) {
     var exp = Math.pow(2, i);
     var row = document.createElement("div");

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>How to Play 2048 - Complete Guide & Tips</title>
+  <meta name="description" content="Learn how to play 2048 with our complete guide. Understand the rules, controls, and basic strategies to master this addictive puzzle game.">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#f67070">
+
+  <link rel="canonical" href="/2048-classic/how-to-play/">
+  <link rel="manifest" href="/manifest.json">
+  <link href="/style/main.css" rel="stylesheet" type="text/css">
+
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/meta/apple-touch-icon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="How to Play 2048 - Complete Guide">
+  <meta property="og:description" content="Learn how to play 2048 with our complete guide.">
+  <meta property="og:url" content="/2048-classic/how-to-play/">
+
+  <link rel="preload" href="/style/fonts/ClearSans-Regular-webfont.woff" as="font" type="font/woff" crossorigin>
+
+  <!-- Google Analytics 4 -->
+  <script>
+    if (window.location.hostname !== 'localhost' && window.location.hostname !== '127.0.0.1') {
+      var script = document.createElement('script');
+      script.async = true;
+      script.src = 'https://www.googletagmanager.com/gtag/js?id=G-WNR2M1MHVH';
+      document.head.appendChild(script);
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-WNR2M1MHVH', { send_page_view: true, anonymize_ip: true });
+    }
+  </script>
+</head>
+<body>
+  <div class="theme-switcher">
+    <a href="/2048-cupcakes/how-to-play/">Cupcakes</a>
+    <a href="/2048-classic/how-to-play/" class="active">Classic</a>
+  </div>
+  <div class="container">
+    <button id="dark-mode-toggle" class="dark-mode-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+      <span class="toggle-icon">🌙</span>
+    </button>
+    <header class="guide-header">
+      <h1 class="guide-title">How to Play 2048 - Complete Guide</h1>
+      <p class="guide-intro">Learn the basics of 2048! This guide covers gameplay mechanics, controls, and how merging works.</p>
+      <nav class="guide-nav">
+        <a href="/2048-classic/" class="nav-link">← Back to Game</a>
+        <a href="/2048-classic/how-to-win/" class="nav-link">Winning Strategies</a>
+      </nav>
+    </header>
+
+    <article class="guide-content">
+      <section id="basics" class="guide-section">
+        <h2>The Basics</h2>
+        <p>2048 is a puzzle game where you merge identical numbers to create higher values. The goal is to reach the <strong>2048 tile</strong> or achieve the highest score possible.</p>
+
+        <h3>Game Controls</h3>
+        <ul>
+          <li><strong>Desktop:</strong> Use arrow keys (↑ ↓ ← →) to move tiles</li>
+          <li><strong>Mobile:</strong> Swipe in any direction</li>
+        </ul>
+
+        <h3>How Merging Works</h3>
+        <p>When two tiles with the same number touch, they merge into one with the combined value:</p>
+        <ul>
+          <li>Two 2s → One 4</li>
+          <li>Two 4s → One 8</li>
+          <li>Two 8s → One 16</li>
+          <li>...and so on up to 2048 and beyond!</li>
+        </ul>
+        <p>After each move, a new tile (2 or 4) appears randomly on the board. The game ends when no more moves are possible.</p>
+      </section>
+
+      <section id="grid-modes" class="guide-section">
+        <h2>Grid Sizes</h2>
+        <ul>
+          <li><strong>3×3 Mode:</strong> Hard difficulty with only 9 cells</li>
+          <li><strong>4×4 Mode:</strong> Classic experience with 16 cells</li>
+          <li><strong>5×5 Mode:</strong> Easy mode with 25 cells</li>
+        </ul>
+      </section>
+
+      <section id="scoring" class="guide-section">
+        <h2>Scoring</h2>
+        <p>Your score increases each time you merge tiles. The points added equal the value of the new tile created. For example, merging two 32s creates a 64 and adds 64 points to your score.</p>
+      </section>
+
+      <section id="next-steps" class="guide-section">
+        <h2>Ready to Master the Game?</h2>
+        <p>Now that you know the basics, check out our <a href="/2048-classic/how-to-win/">winning strategies guide</a> for advanced techniques to achieve higher scores!</p>
+      </section>
+    </article>
+
+    <footer class="site-footer"><small>Original 2048 by <a href="http://gabrielecirulli.com" target="_blank" rel="noopener">Gabriele Cirulli</a>.</small></footer>
+  </div>
+
+  <script src="/js/dark_mode.js"></script>
+</body>
+</html>
