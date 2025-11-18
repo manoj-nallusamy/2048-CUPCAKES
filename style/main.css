@@ -5,7 +5,7 @@
 :root {
   --bg-color: #fff;
   --text-color: #4d2523;
-  --background-image: url(img/image-blr.jpg);
+  --background-image: none;
   --container-bg: #faf8ef;
   --score-bg: #f67070;
   --score-label-color: #3c1b1a;
