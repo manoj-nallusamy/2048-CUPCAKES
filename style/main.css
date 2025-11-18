@@ -110,16 +110,11 @@ html, body {
 }
 
 body {
-  padding: 80px 0;
+  padding: 40px 0;
   background-image: var(--background-image);
   max-width: 100%;
   background-position: top center;
   background-repeat: no-repeat; }
-
-/* Reduce top padding when theme switcher is present */
-body:has(.theme-switcher) {
-  padding-top: 10px;
-}
 
 .heading:after {
   content: "";
@@ -289,6 +284,11 @@ hr {
 html.dark-mode .toggle-icon,
 body.dark-mode .toggle-icon {
   transform: rotate(180deg);
+}
+
+html.dark-mode .dark-mode-toggle,
+body.dark-mode .dark-mode-toggle {
+  background: var(--container-bg);
 }
 
 .container {
@@ -774,7 +774,7 @@ body.dark-mode .toggle-icon {
     overflow-x: hidden; }
 
   h1.title {
-    font-size: 27px;
+    font-size: 36px;
     margin-top: 15px; }
     h1.title small {
       font-size: 27px; }
@@ -786,14 +786,14 @@ body.dark-mode .toggle-icon {
 
   /* Dark mode toggle - smaller on mobile */
   .dark-mode-toggle {
-    width: 36px;
-    height: 36px;
-    top: 10px;
-    right: 10px;
+    width: 28px;
+    height: 28px;
+    top: 8px;
+    right: 8px;
   }
 
   .toggle-icon {
-    font-size: 18px;
+    font-size: 14px;
   }
 
   /* Scale up game container on wider mobile screens */
@@ -1698,10 +1698,20 @@ body.dark-mode .toggle-icon {
   }
 
   /* Inline mode selector mobile */
+  .above-game {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .above-game:after {
+    display: none;
+  }
+
   .mode-buttons-inline {
-    float: left;
+    float: none;
     gap: 4px;
-    margin-bottom: 10px;
+    margin-bottom: 0;
     flex-wrap: nowrap;
   }
 
@@ -1721,7 +1731,7 @@ body.dark-mode .toggle-icon {
   }
 
   .restart-button {
-    float: right;
+    float: none;
     width: auto;
     padding: 8px;
     min-width: auto;
@@ -1745,16 +1755,18 @@ body.dark-mode .toggle-icon {
    THEME SWITCHER STYLES
    ============================================ */
 
+/* Title row - contains title and theme switcher */
+.title-row {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+}
+
 .theme-switcher {
   display: flex;
   justify-content: center;
   gap: 10px;
-  padding: 10px 15px;
-  background-color: var(--container-bg);
-  border-bottom: 2px solid var(--game-container-bg);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+  padding: 10px 0;
 }
 
 .theme-switcher a {
@@ -1778,15 +1790,60 @@ body.dark-mode .toggle-icon {
   color: #fff;
 }
 
+html.dark-mode .theme-switcher a,
+body.dark-mode .theme-switcher a {
+  background-color: var(--container-bg);
+}
+
+html.dark-mode .theme-switcher a:hover,
+body.dark-mode .theme-switcher a:hover,
+html.dark-mode .theme-switcher a.active,
+body.dark-mode .theme-switcher a.active {
+  background-color: var(--score-bg);
+}
+
 @media screen and (max-width: 520px) {
+  /* Hide subtitle on mobile - switcher already shows which version */
+  h1.title small {
+    display: none;
+  }
+
+  /* Title row becomes horizontal on mobile */
+  .title-row {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .title-container {
+    padding-bottom: 0;
+  }
+
+  h1.title {
+    margin-top: 0;
+  }
+
+  /* Compact inline theme switcher for mobile */
   .theme-switcher {
-    padding: 8px 10px;
-    gap: 8px;
+    padding: 0;
+    gap: 4px;
   }
 
   .theme-switcher a {
-    padding: 6px 12px;
-    font-size: 12px;
+    padding: 4px 8px;
+    font-size: 10px;
+  }
+
+  /* Adjust spacing between title-row, scores, and above-game */
+  .scores-container {
+    margin-top: 10px;
+  }
+
+  .score-container, .best-container,
+  .score-points, .best-points {
+    margin-top: 0;
+    margin-bottom: 8px;
   }
 }
 
