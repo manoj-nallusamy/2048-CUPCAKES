@@ -1875,62 +1875,6 @@ body.classic-theme .tile-super .tile-inner {
   font-size: 30px;
 }
 
-/* Dark mode adjustments for classic theme */
-body.dark-mode.classic-theme .tile-2 .tile-inner {
-  background: #4a4a4a;
-  color: #f0f0f0;
-}
-
-body.dark-mode.classic-theme .tile-4 .tile-inner {
-  background: #5a5a5a;
-  color: #f0f0f0;
-}
-
-body.dark-mode.classic-theme .tile-8 .tile-inner {
-  background: #d4915a;
-  color: #f9f6f2;
-}
-
-body.dark-mode.classic-theme .tile-16 .tile-inner {
-  background: #d87545;
-  color: #f9f6f2;
-}
-
-body.dark-mode.classic-theme .tile-32 .tile-inner {
-  background: #d45c42;
-  color: #f9f6f2;
-}
-
-body.dark-mode.classic-theme .tile-64 .tile-inner {
-  background: #d43e1f;
-  color: #f9f6f2;
-}
-
-body.dark-mode.classic-theme .tile-128 .tile-inner {
-  background: #c4a855;
-  color: #f9f6f2;
-}
-
-body.dark-mode.classic-theme .tile-256 .tile-inner {
-  background: #c4a545;
-  color: #f9f6f2;
-}
-
-body.dark-mode.classic-theme .tile-512 .tile-inner {
-  background: #c4a035;
-  color: #f9f6f2;
-}
-
-body.dark-mode.classic-theme .tile-1024 .tile-inner {
-  background: #c49d25;
-  color: #f9f6f2;
-}
-
-body.dark-mode.classic-theme .tile-2048 .tile-inner {
-  background: #c49a15;
-  color: #f9f6f2;
-}
-
 /* Classic theme font sizes for different grid sizes */
 body.classic-theme .grid-3x3 .tile .tile-inner {
   font-size: 65px;
